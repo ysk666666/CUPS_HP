@@ -6,13 +6,13 @@
 
 ## 使用方法
 
-docker build -t cups_hp:v1 .
+docker build -t cups_hp:v2 .
 
-docker run -d --name cups_hp --privileged --device /dev/bus/usb -p 631:631 cups_hp:v1 /usr/sbin/cupsd -f
+docker run -d --name cups_hp --privileged --device /dev/bus/usb -p 631:631 cups_hp:v2 /usr/sbin/cupsd -f
 
-631管理网页的用户名和密码都是root
+http://宿主机ip:631管理网页的用户名和密码都是root
 
-## 配置 Avahi 以广播打印机
+## OpenWrt配置 Avahi 以广播打印机
 
 ```bash
 opkg update
